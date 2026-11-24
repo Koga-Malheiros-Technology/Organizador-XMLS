@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Documentos fiscais reais: nunca versionar (dados de cliente)
+tests/fixtures/*.XML
+tests/fixtures/*.xml
+tests/fixtures/*.rar
+!tests/fixtures/README.md

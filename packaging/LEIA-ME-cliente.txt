@@ -1,0 +1,73 @@
+Organizador de XMLs Fiscais
+===========================
+
+Organiza arquivos XML de NF-e, NFC-e (SAT/CFE) e NFS-e em pastas de
+ano / mes / categoria, separando o que a sua empresa emitiu do que ela
+recebeu.
+
+
+Como usar
+---------
+
+1. Abra o programa (duplo clique em OrganizadorXML.exe).
+2. Digite o CNPJ da sua empresa. Se nao souber, clique em "Detectar CNPJs"
+   que o programa le uma amostra da pasta e sugere os CNPJs mais frequentes.
+3. Escolha a pasta de origem (onde estao os XMLs) e a de destino (onde a
+   arvore organizada vai ser criada).
+4. Clique em "Simular". Nada e movido ainda: o programa mostra o que faria,
+   por categoria e por ano/mes.
+5. Confira e clique em "Executar".
+
+Marque "Copiar em vez de mover" se quiser que os arquivos originais continuem
+na pasta de origem.
+
+
+Antes de executar pela primeira vez
+-----------------------------------
+
+- O destino NUNCA pode estar dentro da origem: o programa recusa e avisa.
+- Comece de uma copia da base, ou rode a simulacao e confira o resultado.
+- A reversao existe: todo relatorio de execucao guarda o que foi feito e
+  permite desfazer.
+
+
+Relatorios
+----------
+
+Ficam em <destino>\_relatorios:
+
+- movimentos.csv  - abre direto no Excel
+- movimentos.json - o mesmo conteudo com o resumo por categoria e ano/mes
+- movimentos.jsonl - manifesto da execucao, que e o que permite reverter
+
+
+Desfazer uma execucao
+---------------------
+
+Na tela principal, escolha a execucao na lista e use "Reverter".
+
+
+Sobre os .rar
+-------------
+
+Desligado por padrao. Se ativar "Extrair arquivos .rar antes", e preciso ter
+o 7-Zip instalado (https://www.7-zip.org). Sem ele o programa avisa e segue
+sem os .rar. O .rar de origem nunca e alterado.
+
+
+Windows protegeu seu PC
+-----------------------
+
+O executavel nao tem certificado de assinatura, entao o Windows pode mostrar
+um aviso na primeira abertura. Clique em "Mais informacoes" e depois em
+"Executar assim mesmo". Isso so acontece com programas que nao foram
+assinados por uma empresa reconhecida.
+
+O Windows tambem pode levar alguns segundos para checar o arquivo antes de
+abrir - e normal na primeira vez.
+
+
+Requerimentos
+-------------
+
+Windows 10 ou superior. Nada precisa ser instalado.

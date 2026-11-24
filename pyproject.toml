@@ -1,0 +1,36 @@
+[project]
+name = "organizer-xml"
+version = "0.1.1"
+description = "Organiza XMLs fiscais de entrada e saida por ano e mes"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Iuri Ramos", email = "iuri.ramos41@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+organizer = "organizer_xml.cli:main"
+organizer-gui = "organizer_xml.ui.app:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+build = [
+    "pillow>=11.0",
+    "pyinstaller>=6.11",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "gui: testes que sobem a janela do Tkinter (use -m 'not gui' para pular)",
+]
+addopts = "-ra"
