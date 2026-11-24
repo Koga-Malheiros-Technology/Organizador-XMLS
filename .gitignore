@@ -14,3 +14,5 @@ tests/fixtures/*.XML
 tests/fixtures/*.xml
 tests/fixtures/*.rar
 !tests/fixtures/README.md
+
+.pytest_cache/
